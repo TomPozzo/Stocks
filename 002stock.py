@@ -109,7 +109,7 @@ def plot_stock(stock):
         )
     
     layout = go.Layout(
-        title = security,
+        title = security, title_font_size=30, title_x=0.4,
         xaxis = {'title' : "Date"},
         yaxis = {'title' : "Close"},
         plot_bgcolor='rgb(14,17,23)'

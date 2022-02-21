@@ -1,7 +1,0 @@
-streamlit
-pandas
-numpy
-pandas_datareader.data
-datetime
-plotly
-scipy

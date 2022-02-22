@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+r# -*- coding: utf-8 -*-
 """
 Created on Wed Feb 16 19:00:50 2022
 
@@ -150,8 +150,8 @@ select_sector = st.sidebar.multiselect('Sector', sectors, sectors)
 
 # Filtering data
 sp500_sector = sp500[sp500['GICS Sector'].isin(select_sector)]['Symbol']
-symbol = st.sidebar.selectbox('Symbol', list(sp500_sector))
-security = sp500[sp500['Symbol'] == symbol]['Security'].item()
+symbol = st.sidebar.selectbox('Security', list(sp500_sector))
+#security = sp500[sp500['Symbol'] == symbol]['Security'].item()
 
 #Download stock historical data
 date_end = datetime.today().date()

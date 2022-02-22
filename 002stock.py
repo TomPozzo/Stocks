@@ -149,9 +149,9 @@ select_sector = st.sidebar.multiselect('Sector', sectors, sectors)
 #select_industry = st.sidebar.multiselect('Industry', industries, industries)
 
 # Filtering data
-sp500_sector = sp500[sp500['GICS Sector'].isin(select_sector)]['Symbol']
-symbol = st.sidebar.selectbox('Security', list(sp500_sector))
-#security = sp500[sp500['Symbol'] == symbol]['Security'].item()
+sp500_sector = sp500[sp500['GICS Sector'].isin(select_sector)]['Security']
+security = st.sidebar.selectbox('Security', list(sp500_sector))
+symbol = sp500[sp500['Security'] == security]['Symbol'].item()
 
 #Download stock historical data
 date_end = datetime.today().date()
